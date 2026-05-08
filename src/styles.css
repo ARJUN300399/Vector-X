@@ -125,11 +125,10 @@ button {
 .charge-panel {
   position: absolute;
   z-index: 3;
-  left: 50%;
-  bottom: clamp(18px, 3vw, 34px);
-  width: min(360px, calc(100vw - 40px));
+  left: clamp(18px, 3vw, 34px);
+  bottom: clamp(16px, 2.4vw, 28px);
+  width: min(280px, 38vw);
   height: 8px;
-  transform: translateX(-50%);
   border: 1px solid rgba(238, 246, 248, 0.16);
   background: rgba(13, 17, 23, 0.7);
   border-radius: 999px;
