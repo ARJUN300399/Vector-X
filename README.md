@@ -39,12 +39,3 @@ src/
 public/
   sounds/             Static game audio assets
 ```
-
-## Deploy
-
-```bash
-npm run build
-firebase deploy --only hosting --project puff-stuff
-```
-
-The Firebase Hosting target is configured in `firebase.json` as site `arc-vector-game`, so deploys publish to https://arc-vector-game.web.app without touching https://puff-stuff.web.app.
