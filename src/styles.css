@@ -63,10 +63,16 @@ button {
   gap: 16px;
 }
 
+.brand-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .brand-lockup {
   display: inline-flex;
   align-items: center;
-  min-width: 132px;
+  min-width: 186px;
   height: 42px;
   padding: 0 14px;
   border: 1px solid rgba(238, 246, 248, 0.16);
@@ -77,6 +83,30 @@ button {
   font-weight: 750;
   letter-spacing: 0;
   border-radius: 8px;
+}
+
+.sound-toggle {
+  pointer-events: auto;
+  min-width: 96px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgba(238, 246, 248, 0.16);
+  border-radius: 8px;
+  background: rgba(13, 17, 23, 0.64);
+  backdrop-filter: blur(14px);
+  color: rgba(238, 246, 248, 0.9);
+  font-size: 0.76rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sound-toggle:hover {
+  border-color: rgba(94, 234, 212, 0.56);
+  color: #f8fbff;
+}
+
+.sound-toggle[aria-pressed="false"] {
+  color: rgba(238, 246, 248, 0.54);
 }
 
 .signal-dot {
@@ -233,8 +263,8 @@ button {
 .start-panel h1 {
   margin: 0;
   color: #f8fbff;
-  font-size: clamp(2.25rem, 8vw, 4.35rem);
-  line-height: 0.9;
+  font-size: clamp(2rem, 6.2vw, 3.7rem);
+  line-height: 0.96;
   letter-spacing: 0;
 }
 
@@ -275,8 +305,20 @@ button {
     flex-direction: column;
   }
 
+  .brand-group {
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .brand-lockup {
-    width: fit-content;
+    min-width: 0;
+    width: auto;
+    flex: 1;
+  }
+
+  .sound-toggle {
+    flex: 0 0 auto;
   }
 
   .stat-row {
